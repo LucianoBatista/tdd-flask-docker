@@ -13,7 +13,7 @@ COPY Pipfile* ./
 
 RUN pip3 install -q --no-cache-dir \
     pipenv==2022.1.8 && \ 
-    pipenv install --system
+    pipenv install --system --dev
 
 COPY . .
 COPY ./entrypoint.sh .

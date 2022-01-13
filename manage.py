@@ -1,3 +1,4 @@
+from re import U
 from flask.app import Flask
 import sys
 from flask.cli import FlaskGroup
@@ -12,6 +13,13 @@ cli = FlaskGroup(create_app=create_app)
 def recreate_db():
     db.drop_all()
     db.create_all()
+    db.session.commit()
+
+
+@cli.command("seed_db")
+def seed_db():
+    db.session.add(User(username="luba", email="luba@hotmail.com"))
+    db.session.add(User(username="dende", email="dende@gotmail.com"))
     db.session.commit()
 
 

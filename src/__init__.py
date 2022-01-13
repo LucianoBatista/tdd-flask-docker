@@ -1,7 +1,7 @@
-from flask import Flask, jsonify
-from flask_restx import Resource, Api
-from flask_sqlalchemy import SQLAlchemy
 import os
+
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 # instantiate the db
 db = SQLAlchemy()

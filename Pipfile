@@ -9,6 +9,10 @@ flask-restx = "==0.5.1"
 psycopg2-binary = "==2.9.3"
 flask-sqlalchemy = "==2.5.1"
 gunicorn = "==20.1.0"
+pytest-cov = "==3.0.0"
+flake8 = "==4.0.1"
+black = "==21.12.b0"
+isort = "==5.10.1"
 
 [dev-packages]
 black = "*"
